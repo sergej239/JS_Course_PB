@@ -1,9 +1,8 @@
 function reduce(arr, callback, startValue) {
-    let result=startValue;
+    let result=startValue, length=arr.length;
     if (typeof startValue === 'number' || typeof startValue === 'string') {
-
         if (arguments.length==3 && Array.isArray(arr) && typeof callback === 'function') {
-            for(let i=0; i<arr.length; i++) {
+            for(let i=0; i<length; i++) {
                 if (i in arr) { // Проверка на не пустой элемент массива
                     result=callback(result, arr[i], i, arr);
                 }
