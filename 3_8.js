@@ -5,7 +5,7 @@ function f(arr) {
     let sum = 0;
     while (arr.length !==0) {
         var cur = arr.shift();
-        if (typeof cur !== 'number' && !Array.isArray(cur)) {
+        if (!(typeof cur === 'number' || Array.isArray(cur))) {
             throw new Error('Was found neither a number nor an array');
         }
         if (Array.isArray(cur)) {
@@ -20,4 +20,4 @@ function f(arr) {
 
 const arr=[[[1,2],[1,2]],[[2,1],[1,2]]];
 let result=f(arr);
-console.log(result);
+console.log(result); // 12
