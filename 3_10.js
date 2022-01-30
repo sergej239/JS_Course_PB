@@ -1,7 +1,7 @@
 function reverse(arr) {
     if (Array.isArray(arr)) {
         if (arr.length === 0) {
-            throw new Error('Array can\'t be []');   
+            throw new Error('Array can\'t be empty');   
         }
         let a=[],i, length=arr.length;
         for (i=0; i<length; i++ ) {
